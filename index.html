@@ -10,6 +10,25 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
+       /* Container for 2 columns */
+.split-layout {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+/* Individual subdivision columns */
+.split-col {
+    flex: 1; /* Both columns take equal 50% width */
+}
+
+/* Responsive adjustment for phones */
+@media (max-width: 768px) {
+    .split-layout {
+        flex-direction: column; /* Stacks vertically on smaller screens */
+    }
+} 
         :root {
             --primary: #581845;    /* Deep Wine / Burgundy */
     --accent: #d4af37;     /* Champagne Gold accent */
@@ -229,10 +248,24 @@ h1, h2, h3, .logo {
     <div class="container">
 
         <!-- About Section -->
-        <section id="about" style="margin-bottom: 3.5rem;">
-            <h2 class="section-title">About Me</h2>
-            <p>I am a second-year Bachelor of Business Administration (BBA) undergraduate student. I focus on understanding consumer behavior, business models, and market dynamics. Driven by data-backed problem solving and creative strategy, I am eager to apply my academic foundation to impactful live projects and internship roles.</p>
-        </section>
+       <section id="about">
+    <h2 class="section-title">About Me</h2>
+
+    <div class="split-layout">
+        <!-- Sub-division 1: Left Column -->
+        <div class="split-col">
+            <p>I am a second-year BBA student with a strong passion for brand strategy and market analysis. I focus on developing practical, data-driven solutions for modern business problems.</p>
+        </div>
+
+        <!-- Sub-division 2: Right Column (Stats / Highlights) -->
+        <div class="split-col" style="background: #ffffff; padding: 1.5rem; border-radius: 8px; border: 1px solid #e2e8f0;">
+            <h3 style="color: var(--primary); margin-bottom: 0.5rem;">Academic Highlights</h3>
+            <p><strong>Degree:</strong> Bachelor of Business Administration</p>
+            <p><strong>Core Focus:</strong> Marketing & Brand Strategy</p>
+            <p><strong>Expected Graduation:</strong> 2028</p>
+        </div>
+    </div>
+</section>
 
         <!-- Projects & Case Studies -->
         <section id="projects">
